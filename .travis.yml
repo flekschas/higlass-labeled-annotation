@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+- '8'
+branches:
+  only:
+  - master
+  - develop
+  - "/^v.*$/"
+before_script:
+- npm install
+before_deploy:
+- npm run prerelease
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: xjP3suHicM2y+F+SsHlHxqB0JrDVj5CghKH+p0ZY2IK/cnu4c4862oEaQ5sNEBhsa8XTuqndpkXyRnXEzLxQjIMSvAJZoeEQ/F7u+rtBcrReaVpg9Kf5py7x3YHUx7CaNTw1aIV94ZBkXk42fTtol/StR889MYQif/28h7MiD8fWEkxkKvBJx0N+uQ1I75yslU8HM5EnTRH0g0lX9kI/NJpi6dl3+VVzXCxO+O21in4F0O0Rak6JIGQbLI7E1LMTHO5lCza9u5KxgVVI/WmqKsYWBXgQ0HQGD+ts2QDVTGT7GwWug74G0S47YOdv1u+rUH3Ba6tgepQMr3gb402pPT44Ux/KxSk3e13YzKKu7DnR3ZcFDxnIL/bobj4Os9IoS62yvsMOnmTFYi+Gx6e2cDFwsThBzGaOZq7knZcfbJXd5B2ZZvo3C4AK/2hdUju7gvw9peWzl/SUtUlgt2TlWqFX6R5SseGpbco9I6RQqTK2RRh6NXi24VXozOFr3y1qbO2hFTA+v15QD392CW2Gs6WGoKE1z1ILFd5f8jvUKDV1aWq9BX/kdzmnrizEw1KLV/uqE4VAY2i66bozLJmzLK3+8MM+oeA4JhZV4TxZItLgBuyuh1qVtxO3w9oPYW0gnkikzR4uTlXsrfkwm/+UmRYg2j6DA2SYnWF1uJ94Y80=
+    file: dist.zip
+    on:
+      branch: master
+      tags: true
+      repo: flekschas/higlass-labeled-annotation
+  - provider: npm
+    skip_cleanup: true
+    email: service@lekschas.de
+    api_key:
+      secure: YThfy+UlKRhowv/UdqqpDzTx2VdsbbTBYJwAoFkobwk8NsH0wntR8/yoaZ5G3kEQ/+EUh1JNepx2gNRExrMlv0vg9E8DPFuJo8K9l0o4gWfQgEAEDMTnnxPc8gpeANBPr7tqvf7IuI3VmeI/emkrIg3UXSxkMmXkxEmJCEU6gpnjwNeB/9a3bf9tWgoOKffXPCLxjlHgHvzbbCCbCHUTNMBTexVY0JmYXdLgnckPjCzRX3XGA5s3djTnZCioBAIObtrZb9t+ojo0FavYXv9b2dXwjSfvRLZVNKDpIxxUr/p5wy6lVQPGHQSaCs8xZE/1+XNkfeuRqt3lr2pLoVkgiTmzuqSIVNPaqhmTSmQA2L+KePJhojM3cXL+2pEhinBwd1COsFziNmYXwOemT2kRaL+DSTICkyN0Si83fD5mSZGe/IA0k2/oS+xYhJ46HkWnROH+79wVAUO0UcMFQ03FjIC+EWQZlCHvGZicw8nPOCl9CqgYdU0QDqPKtVzKXLwM66DtdFHDvK+kLC4L98JwgNHoGmWVG0+KwquL/ilwvzq4BHvWLGXTN46rjO8y8xPUzVhPas9fPbBtsjDuatJzRphEZD7uud7pyu40NHq/RhI2rj/wKcUA1DJKhho0/srWWbZBhI+arALN+epEaZHz/8JqCsdS0cJ36zHDbcPYZl4=
+    on:
+      branch: master
+      tags: true
+      repo: flekschas/higlass-labeled-annotation
