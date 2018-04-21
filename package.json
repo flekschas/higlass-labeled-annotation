@@ -1,0 +1,69 @@
+{
+  "name": "higlass-labeled-annotation",
+  "version": "0.1.0",
+  "description": "Labeled Annotation Track for HiGlass",
+  "keywords": [
+    "HiGlass",
+    "Track",
+    "Annotations",
+    "Labels"
+  ],
+  "author": "Fritz Lekschas",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Fritz Lekschas",
+      "url": "http://github.com/flekschas"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flekschas/higlass-labeled-annotation.git"
+  },
+  "main": "src/index.js",
+  "unpkg": "dist/higlass-labeled-annotation.min.js",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
+    "higlass": "^0.10.22",
+    "higlass-image": "^0.1.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "node-sass": "^4.8.3",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-loader": "^2.1.4",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "unminified-webpack-plugin": "^2.0.0",
+    "webpack": "^4.6.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
+    "prerelease": "rm -rf dist/*; npm run build; zip -r dist.zip dist"
+  },
+  "dependencies": {
+    "d3-color": "^1.0.3",
+    "higlass-register": "^0.1.2"
+  }
+}
