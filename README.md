@@ -4,9 +4,11 @@
 
 [![HiGlass](https://img.shields.io/badge/higlass-rocks-red.svg?colorB=ee82ee)](http://higlass.io)
 [![Build Status](https://img.shields.io/travis/flekschas/higlass-scalable-insets/master.svg?colorB=ffa500)](https://travis-ci.org/flekschas/higlass-labeled-annotation)
-[![Lekschas](https://img.shields.io/badge/awesome-awesomeness-red.svg?colorB=3cb371)](http://lekschas.de)
+[![Lekschas](https://img.shields.io/badge/demo-awesome-red.svg?colorB=3cb371)](http://higlass-labeled-annotation.lekschas.de/)
 
 ![HiGlass with a labeled annotation](/teaser.jpg?raw=true "Look at that wonderful labeled annotation. Isn't it a beauty?")
+
+**Live Demo:** [http://higlass-labeled-annotation.lekschas.de](http://higlass-labeled-annotation.lekschas.de)
 
 **Note**: This is the source code for labeled annotation track. You might want to check out HiGlass core repositories too:
 
