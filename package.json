@@ -60,6 +60,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
+    "ghp": "npm run prerelease; rm -rf ../higlass-labeled-annotation-ghp/*; cp -r ./dist/* ../higlass-labeled-annotation-ghp/; touch ../higlass-labeled-annotation-ghp/.nojekyll; touch ../higlass-labeled-annotation-ghp/CNAME; echo 'higlass-labeled-annotation.lekschas.de' > ../higlass-labeled-annotation-ghp/CNAME; cp ./node_modules/higlass/dist/scripts/hglib.js ../higlass-labeled-annotation-ghp/; cp ./node_modules/higlass/dist/styles/hglib.css ../higlass-labeled-annotation-ghp/; cp ./node_modules/higlass-image/dist/higlass-image.js ../higlass-labeled-annotation-ghp/",
     "prerelease": "rm -rf dist/*; npm run build; zip -r dist.zip dist"
   },
   "dependencies": {
