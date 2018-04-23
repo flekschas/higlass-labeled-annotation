@@ -770,7 +770,7 @@ var LabeledAnnotationTrack_LabeledAnnotation = function LabeledAnnotation(HGC) {
             if (textBoundsWidth > textWidth) {
               textWidth = textBoundsWidth + 4;
             }
-            console.log('??', textWidth);
+
             _this2.g1.drawRect(startX - 8, startY - 8, textWidth, 16);
             _this2.g3.drawRect(startX - 8, startY - 8, textWidth, 16);
             _this2.drawnLabels[index].x = startX - 6;
