@@ -121,7 +121,7 @@ const LabeledAnnotation = (HGC, ...args) => {
           if (textBoundsWidth > textWidth) {
             textWidth = textBoundsWidth + 4;
           }
-          console.log('??', textWidth);
+
           this.g1.drawRect(startX - 8, startY - 8, textWidth, 16);
           this.g3.drawRect(startX - 8, startY - 8, textWidth, 16);
           this.drawnLabels[index].x = startX - 6;
