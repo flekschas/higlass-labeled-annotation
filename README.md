@@ -2,7 +2,7 @@
 
 > An annotation track with a beautiful white outline and a carefully crafted text label that will make your gorgeous annotations shine!
 
-[![higlass](https://img.shields.io/badge/higlass-💅-red.svg?colorB=ee82ee)](http://higlass.io)
+[![higlass](https://img.shields.io/badge/higlass-i_am_in_love-red.svg?colorB=ee82ee)](http://higlass.io)
 [![npm version](https://img.shields.io/npm/v/higlass-labeled-annotation.svg)](https://www.npmjs.com/package/higlass-labeled-annotation)
 [![build status](https://img.shields.io/travis/flekschas/higlass-scalable-insets/master.svg?colorB=ffa500)](https://travis-ci.org/flekschas/higlass-labeled-annotation)
 [![demo](https://img.shields.io/badge/demo-awesome-red.svg?colorB=3cb371)](http://higlass-labeled-annotation.lekschas.de/)
