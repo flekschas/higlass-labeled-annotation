@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<head lang="en">
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="author" content="Fritz Lekschas">
   <meta name="description" content="A plugin track for displaying annotations with a beautiful white outline and a carefully crafted text label that will make your gorgeous annotations shine!">
   <meta name="keywords" content="HiGlass, Plugin Tracks, Annotations, Text Labels">
 
-  <!-- Schema.org markup for Google+ -->
+  <!-- Schema.org markup for Google -->
   <meta itemprop="name" content="HiGlass Labeled Annotation Track">
   <meta itemprop="description" content="A plugin track to display labeled annotations in HiGlass">
   <meta itemprop="image" content="https://raw.githubusercontent.com/flekschas/higlass-labeled-annotation/master/teaser.jpg">
@@ -17,7 +17,6 @@
   <meta name="twitter:title" content="HiGlass Labeled Annotation Track">
   <meta name="twitter:description" content="A plugin track to display labeled annotations in HiGlass">
   <meta name="twitter:creator" content="@flekschas">
-  <!-- Twitter summary card with large image must be at least 280x150px -->
   <meta name="twitter:image:src" content="https://raw.githubusercontent.com/flekschas/higlass-labeled-annotation/master/teaser.jpg">
 
   <!-- Open Graph -->
@@ -28,16 +27,11 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/flekschas/higlass-labeled-annotation/master/teaser.jpg" />
 
   <title>HiGlass Labeled Annotation Track</title>
-  <style type="text/css">
-  html,
-  body {
-    background: black !important;
-  }
-  </style>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <% if (htmlWebpackPlugin.options.isProduction) { %>
-  <link rel="stylesheet" href="https://unpkg.com/higlass/dist/styles/hglib.css">
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.2.8/dist/hglib.css">
   <% } else { %>
   <link rel="stylesheet" href="hglib.css">
   <% } %>
@@ -47,6 +41,7 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Open Sans', sans-serif;
       background: black !important;
     }
     #demo {
@@ -99,10 +94,10 @@
     }
   </style>
 
-  <script crossorigin src="https://unpkg.com/react@16.5/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16.5/umd/react-dom.production.min.js"></script>
-  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.2/pixi.min.js"></script>
-  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.1/react-bootstrap.min.js"></script>
+  <script src="https://unpkg.com/react@16.5.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16.5.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/pixi.js@4.8.2/dist/pixi.min.js"></script>
+  <script src="https://unpkg.com/react-bootstrap@0.32.1/dist/react-bootstrap.min.js"></script>
 </head>
 <body >
   <div id="info">
@@ -123,7 +118,7 @@
 </body>
 <script src="higlass-image.js"></script>
 <% if (htmlWebpackPlugin.options.isProduction) { %>
-<script src="https://unpkg.com/higlass/dist/scripts/hglib.js"></script>
+<script src="https://unpkg.com/higlass@1.2.8/dist/hglib.min.js"></script>
 <% } else { %>
 <script src="hglib.js"></script>
 <% } %>
