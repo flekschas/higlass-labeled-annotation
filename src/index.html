@@ -123,7 +123,7 @@
 <script src="hglib.js"></script>
 <% } %>
 <script>
-const testViewConfig = {
+const viewConfig = {
   editable: false,
   zoomFixed: false,
   views: [
@@ -181,9 +181,9 @@ const testViewConfig = {
   locationLocks: { locksByViewUid: {}, locksDict: {} },
 };
 
-window.hglib.createHgComponent(
+window.hglib.viewer(
   document.getElementById('demo'),
-  testViewConfig,
+  viewConfig,
   { bounded: true, isDarkTheme: true },
 );
 </script>
