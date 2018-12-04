@@ -165,4 +165,7 @@ LabeledAnnotation.config = {
   }
 };
 
+LabeledAnnotation.version = VERSION;
+LabeledAnnotation.dependencies = DEPENDENCIES;
+
 export default LabeledAnnotation;

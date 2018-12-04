@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -7,6 +7,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
+
+const { VERSION, DEPENDENCIES } = require('./globals.js');
 
 module.exports = (envs, argv) => ({
   output: {
@@ -108,6 +110,10 @@ module.exports = (envs, argv) => ({
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      VERSION,
+      DEPENDENCIES
+    }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
