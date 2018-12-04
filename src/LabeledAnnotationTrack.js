@@ -11,8 +11,8 @@ const LabeledAnnotation = (HGC, ...args) => {
   const { PIXI } = HGC.libraries;
 
   class LabeledAnnotationClass extends HGC.tracks.PixiTrack {
-    constructor(scene, trackConfig) {
-      super(scene, trackConfig.options);
+    constructor(context, options) {
+      super(context, options);
 
       this.drawnRects = new Set();
 
