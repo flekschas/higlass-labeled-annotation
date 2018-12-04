@@ -6,6 +6,7 @@
 [![npm version](https://img.shields.io/npm/v/higlass-labeled-annotation.svg)](https://www.npmjs.com/package/higlass-labeled-annotation)
 [![build status](https://img.shields.io/travis/flekschas/higlass-scalable-insets/master.svg?colorB=ffa500)](https://travis-ci.org/flekschas/higlass-labeled-annotation)
 [![demo](https://img.shields.io/badge/demo-awesome-red.svg?colorB=3cb371)](http://higlass-labeled-annotation.lekschas.de/)
+[![code style prettier](https://img.shields.io/badge/code_style-prettier-80a1ff.svg)](https://github.com/prettier/prettier)
 
 ![HiGlass with a labeled annotation](/teaser.jpg?raw=true "Look at that wonderful labeled annotation. Isn't it a beauty?")
 
