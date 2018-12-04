@@ -3,7 +3,7 @@ import { color } from 'd3-color';
 const LabeledAnnotation = (HGC, ...args) => {
   if (!new.target) {
     throw new Error(
-      'Uncaught TypeError: Class constructor cannot be invoked without "new"',
+      'Uncaught TypeError: Class constructor cannot be invoked without "new"'
     );
   }
 
@@ -31,9 +31,11 @@ const LabeledAnnotation = (HGC, ...args) => {
       this.drawnRects.clear();
 
       const minRectWidth = this.options.minRectWidth
-        ? this.options.minRectWidth : 10;
+        ? this.options.minRectWidth
+        : 10;
       const minRectHeight = this.options.minRectWidth
-        ? this.options.minRectHeight : 10;
+        ? this.options.minRectHeight
+        : 10;
 
       super.draw();
       // const graphics = this.pMain;
@@ -52,14 +54,18 @@ const LabeledAnnotation = (HGC, ...args) => {
 
         if (!stroke) stroke = fill;
 
-        const fillHex = PIXI.utils.rgb2hex(
-          [fill.r / 255.0, fill.g / 255.0, fill.b / 255.0],
-        );
-        const strokeHex = PIXI.utils.rgb2hex(
-          [stroke.r / 255.0, stroke.g / 255.0, stroke.b / 255.0],
-        );
+        const fillHex = PIXI.utils.rgb2hex([
+          fill.r / 255.0,
+          fill.g / 255.0,
+          fill.b / 255.0
+        ]);
+        const strokeHex = PIXI.utils.rgb2hex([
+          stroke.r / 255.0,
+          stroke.g / 255.0,
+          stroke.b / 255.0
+        ]);
 
-        this.g1.lineStyle(6, 0xFFFFFF, 1);
+        this.g1.lineStyle(6, 0xffffff, 1);
         this.g1.beginFill(fillHex, fill.opacity);
 
         this.g2.lineStyle(2, strokeHex, stroke.opacity);
@@ -77,20 +83,20 @@ const LabeledAnnotation = (HGC, ...args) => {
         let width = endX - startX;
         let height = endY - startY;
 
-        const _minRectWidth = typeof region[6] !== 'undefined'
-          ? region[6] : minRectWidth;
-        const _minRectHeight = typeof region[7] !== 'undefined'
-          ? region[7] : minRectHeight;
+        const _minRectWidth =
+          typeof region[6] !== 'undefined' ? region[6] : minRectWidth;
+        const _minRectHeight =
+          typeof region[7] !== 'undefined' ? region[7] : minRectHeight;
 
         if (width < _minRectWidth) {
           // this region is too small to draw so center it on the location
           // where it would be drawn
-          startX = ((startX + endX) / 2) - (_minRectWidth / 2);
+          startX = (startX + endX) / 2 - _minRectWidth / 2;
           width = _minRectWidth;
         }
 
         if (height < _minRectHeight) {
-          startY = ((startY + endY) / 2) - (_minRectHeight / 2);
+          startY = (startY + endY) / 2 - _minRectHeight / 2;
           height = _minRectHeight;
         }
 
@@ -105,15 +111,12 @@ const LabeledAnnotation = (HGC, ...args) => {
         if (region[8]) {
           let textWidth = 16;
           if (!this.drawnLabels[index]) {
-            this.drawnLabels[index] = new PIXI.Text(
-              region[8],
-              {
-                fontFamily: 'Arial',
-                fontSize: 16,
-                fill: 0xFFFFFF,
-                align: 'center',
-              },
-            );
+            this.drawnLabels[index] = new PIXI.Text(region[8], {
+              fontFamily: 'Arial',
+              fontSize: 16,
+              fill: 0xffffff,
+              align: 'center'
+            });
             this.g3.addChild(this.drawnLabels[index]);
           }
 
@@ -156,12 +159,10 @@ LabeledAnnotation.config = {
   name: 'Labeled Annotations',
   thumbnail: null,
   hidden: true,
-  availableOptions: [
-    'regions',
-  ],
+  availableOptions: ['regions'],
   defaultOptions: {
-    regions: [],
-  },
+    regions: []
+  }
 };
 
 export default LabeledAnnotation;
